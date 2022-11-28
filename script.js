@@ -46,13 +46,14 @@ function checkGuess() {
             lowOrHi.textContent = 'Last guess was too high!';
         }
     }
+    guessCount++;
+    guessField.value = '';
+    guessField.focus();
 }
 
 guessSubmit.addEventListener('click', checkGuess);
 
-guessCount++;
-guessField.value = '';
-guessField.focus();
+
 
 function setGameOver() {
     guessField.disabled = true;
